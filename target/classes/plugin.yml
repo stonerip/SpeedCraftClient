@@ -1,0 +1,17 @@
+name: SpeedCraftClient
+main: speedcraftclient.Speedcraftclient
+version: 0.1
+commands:
+   scquit:
+      description: Quits a run
+      usage: /scquit
+      permission: speedcraft.quit
+      permission-message: You don't have <permission>
+permissions:
+    speedcraftc.*:
+        description: Gives access to all speedcraftclient commands
+        children:
+            speedcraftc.scquit: true
+    speedcraftc.scquit:
+        description: Allows you to quit a run
+        default: op
